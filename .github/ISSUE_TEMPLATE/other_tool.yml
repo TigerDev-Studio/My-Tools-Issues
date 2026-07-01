@@ -1,26 +1,29 @@
-name: Bug report
-description: Report something that is not working correctly.
-title: "[Bug]: "
-labels:
-  - bug
+name: Other or new tool
+description: Report an issue, request, or question for a tool that is not listed.
+title: "[Other]: "
 body:
   - type: markdown
     attributes:
       value: |
-        Thanks for reporting a bug. Remove tokens, passwords, SSH keys, private repository URLs, and other secrets before posting.
+        Use this form only when the tool is not listed in the normal bug, feature, or question forms.
+
+  - type: input
+    id: tool-name
+    attributes:
+      label: Tool name
+      description: Enter the exact tool or extension name.
+      placeholder: "Example: My New VS Code Extension"
+    validations:
+      required: true
 
   - type: dropdown
-    id: product
+    id: request-type
     attributes:
-      label: Tool
-      description: Which tool has the bug?
+      label: Request type
       options:
-        - GitHub SSH Profile Switcher
-        - Frontend Helper Pro
-        - AI Git Commit Assistant
-        - Smart Regex Builder
-        - Git Graph Pro
-        - Folder Structure Generator
+        - Bug report
+        - Feature request
+        - Question
     validations:
       required: true
 
@@ -29,16 +32,12 @@ body:
     attributes:
       label: Tool version
       placeholder: "Example: 1.2.0"
-    validations:
-      required: true
 
   - type: input
     id: vscode-version
     attributes:
       label: VS Code version
       placeholder: "Example: 1.92.0"
-    validations:
-      required: true
 
   - type: dropdown
     id: os
@@ -49,33 +48,16 @@ body:
         - Windows
         - Linux
         - Other
-    validations:
-      required: true
 
   - type: textarea
-    id: steps
+    id: details
     attributes:
-      label: Steps to reproduce
+      label: Details
+      description: Describe the bug, feature request, or question.
       placeholder: |
-        1. Open...
-        2. Run...
-        3. See error...
-    validations:
-      required: true
-
-  - type: textarea
-    id: expected
-    attributes:
-      label: Expected result
-      description: What should have happened?
-    validations:
-      required: true
-
-  - type: textarea
-    id: actual
-    attributes:
-      label: Actual result
-      description: What happened instead?
+        What happened?
+        What did you expect?
+        What should be improved?
     validations:
       required: true
 

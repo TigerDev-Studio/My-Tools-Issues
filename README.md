@@ -13,6 +13,7 @@ Use the issue form that matches your request:
 - [Bug report](https://github.com/TigerDev-Studio/My-Tools-Issues/issues/new?template=bug.yml)
 - [Feature request](https://github.com/TigerDev-Studio/My-Tools-Issues/issues/new?template=feature_request.yml)
 - [Question](https://github.com/TigerDev-Studio/My-Tools-Issues/issues/new?template=question.yml)
+- [Other or new tool](https://github.com/TigerDev-Studio/My-Tools-Issues/issues/new?template=other_tool.yml)
 - [Choose an issue type](https://github.com/TigerDev-Studio/My-Tools-Issues/issues/new/choose)
 
 ## Supported Tools
@@ -23,6 +24,8 @@ Use the issue form that matches your request:
 - Smart Regex Builder
 - Git Graph Pro
 - Folder Structure Generator
+
+If your tool is not listed, use the Other or new tool form.
 
 ## Before Posting
 
