@@ -1,0 +1,64 @@
+name: Feature request
+description: Suggest an improvement or new capability.
+title: "[Feature]: "
+labels:
+  - enhancement
+body:
+  - type: dropdown
+    id: product
+    attributes:
+      label: Tool
+      description: Which tool is this request for?
+      options:
+        - GitHub SSH Profile Switcher
+        - Frontend Helper Pro
+        - AI Git Commit Assistant
+        - Smart Regex Builder
+        - Git Graph Pro
+        - Folder Structure Generator
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What problem would this feature solve?
+      placeholder: "When I use the tool, I need to..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed solution
+      description: What should the tool do?
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Any workaround or different approach you have tried.
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      options:
+        - Nice to have
+        - Important
+        - Blocking my workflow
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      options:
+        - label: I searched existing issues before creating this request.
+          required: true
+        - label: I did not include private source code, secrets, tokens, passwords, or SSH keys.
+          required: true

@@ -1,0 +1,97 @@
+name: Bug report
+description: Report something that is not working correctly.
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a bug. Remove tokens, passwords, SSH keys, private repository URLs, and other secrets before posting.
+
+  - type: dropdown
+    id: product
+    attributes:
+      label: Tool
+      description: Which tool has the bug?
+      options:
+        - GitHub SSH Profile Switcher
+        - Frontend Helper Pro
+        - AI Git Commit Assistant
+        - Smart Regex Builder
+        - Git Graph Pro
+        - Folder Structure Generator
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Tool version
+      placeholder: "Example: 1.2.0"
+    validations:
+      required: true
+
+  - type: input
+    id: vscode-version
+    attributes:
+      label: VS Code version
+      placeholder: "Example: 1.92.0"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating system
+      options:
+        - macOS
+        - Windows
+        - Linux
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Open...
+        2. Run...
+        3. See error...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected result
+      description: What should have happened?
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual result
+      description: What happened instead?
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs or screenshots
+      description: Paste logs or attach screenshots. Remove secrets before posting.
+      render: shell
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      options:
+        - label: I removed tokens, passwords, SSH keys, private repository URLs, and other secrets.
+          required: true
+        - label: I searched existing issues before creating this report.
+          required: true

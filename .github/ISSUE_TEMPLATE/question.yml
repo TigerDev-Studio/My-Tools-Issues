@@ -1,0 +1,42 @@
+name: Question
+description: Ask a usage or troubleshooting question.
+title: "[Question]: "
+labels:
+  - question
+body:
+  - type: dropdown
+    id: product
+    attributes:
+      label: Tool
+      description: Which tool is your question about?
+      options:
+        - GitHub SSH Profile Switcher
+        - Frontend Helper Pro
+        - AI Git Commit Assistant
+        - Smart Regex Builder
+        - Git Graph Pro
+        - Folder Structure Generator
+    validations:
+      required: true
+
+  - type: textarea
+    id: question
+    attributes:
+      label: Question
+      description: What do you need help with?
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: Add tool version, VS Code version, OS, screenshots, or logs if useful. Remove secrets before posting.
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      options:
+        - label: I did not include private source code, secrets, tokens, passwords, or SSH keys.
+          required: true
