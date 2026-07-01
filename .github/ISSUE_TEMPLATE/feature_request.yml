@@ -16,8 +16,16 @@ body:
         - Smart Regex Builder
         - Git Graph Pro
         - Folder Structure Generator
+        - Other / New tool
     validations:
       required: true
+
+  - type: input
+    id: other-tool
+    attributes:
+      label: Other / new tool name
+      description: If you selected "Other / New tool", enter the tool name here.
+      placeholder: "Example: My New VS Code Extension"
 
   - type: textarea
     id: problem
